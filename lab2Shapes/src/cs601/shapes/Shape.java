@@ -21,7 +21,7 @@ public abstract class Shape {
 	@Override
 	public String toString() {
 		// FILL IN CODE
-		return  "";
+		return  getClass().getSimpleName() + "	" + (new DecimalFormat("#.##").format(area())) ;
 	}
 	
 }

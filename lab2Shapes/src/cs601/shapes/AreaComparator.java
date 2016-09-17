@@ -4,6 +4,8 @@ import java.util.Comparator;
 
 /** A comparator that compares Shapes based on the area */
 public class AreaComparator implements Comparator<Shape> {
+	
+	private final static double EPS = 0.001;
 
 	/** Compare the two shapes by comparing their areas (or surface areas). 
 	 * @param o1
@@ -16,7 +18,15 @@ public class AreaComparator implements Comparator<Shape> {
 	@Override
 	public int compare(Shape o1, Shape o2) {
 		// FILL IN CODE
-		return 0; // don't forget to change it
+		if(Math.abs(o1.area() - o2.area()) < EPS){
+			return 0;
+		} else if(o1.area() < o2.area()){
+			return -1;			
+		} else if (o1.area() > o2.area()){
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 
 }

@@ -1,5 +1,7 @@
 package cs601.shapes;
 
+import java.text.DecimalFormat;
+
 /** An abstract class Shape2D. Extends Shape. 
  * A direct parent of all two-dimensional shape classes. 
  */
@@ -21,7 +23,7 @@ public abstract class Shape2D extends Shape {
 	@Override
 	public String toString() {
 		// FILL IN CODE
-		return  "";
+		return  super.toString() + "	" + (new DecimalFormat("#.##").format(perimeter()));
 	}
 	
 }
