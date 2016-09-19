@@ -1,6 +1,6 @@
 package cs601.shapes;
 
-import java.text.DecimalFormat;
+import java.util.Locale;
 
 /** An abstract class Shape2D. Extends Shape. 
  * A direct parent of all two-dimensional shape classes. 
@@ -23,7 +23,8 @@ public abstract class Shape2D extends Shape {
 	@Override
 	public String toString() {
 		// FILL IN CODE
-		return  super.toString() + "	" + (new DecimalFormat("#.##").format(perimeter()));
+		// to convert my computer default value to general value  , --> . and remove 0 before the dot.
+		return  super.toString() + "	" + String.format(Locale.US,"%.2f", perimeter()).replaceFirst("^0\\.", ".");
 	}
 	
 }

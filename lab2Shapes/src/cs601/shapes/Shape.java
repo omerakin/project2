@@ -1,6 +1,6 @@
 package cs601.shapes;
 
-import java.text.DecimalFormat;
+import java.util.Locale;
 
 /** An abstract class Shape. At the top of the shape hierarchy. */
 public abstract class Shape {
@@ -21,7 +21,8 @@ public abstract class Shape {
 	@Override
 	public String toString() {
 		// FILL IN CODE
-		return  getClass().getSimpleName() + "	" + (new DecimalFormat("#.##").format(area())) ;
+		// to convert my computer default value to general value  , --> . and remove 0 before the dot.
+		return  getClass().getSimpleName() + "	" + String.format(Locale.US,"%.2f", area()).replaceFirst("^0\\.", ".") ;
 	}
 	
 }

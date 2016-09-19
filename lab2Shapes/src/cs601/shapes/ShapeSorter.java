@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 /** A class that stores a collection of shapes, and is able to sort 
  * shapes based on different criteria. Stores shapes in three lists:
@@ -88,7 +87,7 @@ public class ShapeSorter {
 					shape.add(platonicSolid);
 					shape3d.add(platonicSolid);
 				} else {
-					System.out.println("Not defined Shape!!!");
+					//System.out.println("Not defined Shape!!!");
 				}
 			}
 			bufferedReader.close();

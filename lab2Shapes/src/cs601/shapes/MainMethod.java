@@ -11,6 +11,10 @@ public class MainMethod {
 		shapeSorter.loadShapes("shapesFile.txt");
 		shapeSorter.printToFile("outputFile.txt");
 		
+		//Parallelepiped parallelepiped = new Parallelepiped(1.0, 2.0, 4.0, 45.0, 45.0);
+		
+		//System.out.println(parallelepiped.volume());
+		
 	}
 
 }

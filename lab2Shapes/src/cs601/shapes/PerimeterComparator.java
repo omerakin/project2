@@ -2,18 +2,18 @@ package cs601.shapes;
 
 import java.util.Comparator;
 
-public class PerimeterComparator implements Comparator<Shape2D> {
+public class PerimeterComparator implements Comparator<Shape> {
 
 	private final static double EPS = 0.001;
 	
 	@Override
-	public int compare(Shape2D o1, Shape2D o2) {
+	public int compare(Shape o1, Shape o2) {
 		// TODO Auto-generated method stub
-		if(Math.abs(o1.perimeter() - o2.perimeter()) < EPS){
+		if(Math.abs(((Shape2D)o1).perimeter() - ((Shape2D)o2).perimeter()) < EPS){
 			return 0;
-		} else if(o1.perimeter() < o2.perimeter()){
+		} else if(((Shape2D)o1).perimeter() < ((Shape2D)o2).perimeter()){
 			return -1;			
-		} else if (o1.perimeter() > o2.perimeter()){
+		} else if (((Shape2D)o1).perimeter() > ((Shape2D)o2).perimeter()){
 			return 1;
 		} else {
 			return 0;

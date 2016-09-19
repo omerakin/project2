@@ -34,11 +34,11 @@ public class ParallelepipedTest {
 		double actual1,actual2;
 		double expected1,expected2;
 		
-		Parallelepiped parallelepiped = new Parallelepiped(1.0, 2.0, 4.0, 45.0, 450);
+		Parallelepiped parallelepiped = new Parallelepiped(1.0, 2.0, 4.0, 45.0, 45.0);
 		Parallelepiped parallelepiped2 = new Parallelepiped(1.0, 2.0, 1.0, 45.0, 45.0);
 		
 		actual1 = parallelepiped.volume();
-		expected1 = 5.65685424949238;
+		expected1 = 3.6407188844978164;
 		
 		actual2 = parallelepiped2.volume();
 		expected2 = 0.9101797211244541;

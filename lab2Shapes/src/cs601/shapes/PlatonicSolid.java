@@ -34,6 +34,10 @@ public class PlatonicSolid extends Shape3D{
 	@Override
 	public double area() {
 		// TODO Auto-generated method stub
+		
+		//return (1.0*lengthOfTheEdge*lengthOfTheEdge/2)*(1.0*lengthOfTheEdge*lengthOfTheEdge/2)*numberOfFacesMeetingAtEachVertex
+		
+		
 		if(numberOfEdgesForEachFace == 3 && numberOfFacesMeetingAtEachVertex == 3){
 			return 1.0*Math.sqrt(3)*lengthOfTheEdge*lengthOfTheEdge;
 		} else if (numberOfEdgesForEachFace == 4 && numberOfFacesMeetingAtEachVertex == 3) {
@@ -47,6 +51,7 @@ public class PlatonicSolid extends Shape3D{
 		} else {
 			return 0;
 		}
+		
 	}
 
 	public int getNumberOfEdgesForEachFace() {

@@ -1,6 +1,6 @@
 package cs601.shapes;
 
-import java.text.DecimalFormat;
+import java.util.Locale;
 
 /** An abstract class Shape3D. Extends Shape. 
  * A direct parent of all three-dimensional shape classes. 
@@ -24,6 +24,7 @@ public abstract class Shape3D extends Shape {
 	@Override
 	public String toString() {
 		// FILL IN CODE
-		return  super.toString() + "	" + (new DecimalFormat("#.##").format(volume()));
+		// to convert my computer default value to general value  , --> . and remove 0 before the dot.
+		return  super.toString() + "	" + String.format(Locale.US,"%.2f",volume()).replaceFirst("^0\\.", ".");
 	}
 }

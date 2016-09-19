@@ -12,7 +12,7 @@ Sphere: 1.5
 Sphere: 4.0
 Parallelepiped: 1.0 1.0 1.0 30.0 45.0
 Parallelepiped: 1.0 2.0 4.0 45.0 45.0
-Parallelepiped: 5.0 6.0 5.0 90.0 45.0
+Parallelepiped: 5.0 6.0 5.0 90.0 90.0
 PlatonicSolid: 4 3 1.0
 PlatonicSolid: 3 3 1.0
 PlatonicSolid: 3 4 1.0
