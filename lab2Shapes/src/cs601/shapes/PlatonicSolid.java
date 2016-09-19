@@ -16,6 +16,13 @@ public class PlatonicSolid extends Shape3D{
 	@Override
 	public double volume() {
 		// TODO Auto-generated method stub
+		double dihedralAngle;
+		double inRadius;
+		dihedralAngle  = 2*Math.asin(Math.cos(Math.PI / numberOfFacesMeetingAtEachVertex) / Math.sin(Math.PI / numberOfEdgesForEachFace));
+		inRadius =  (lengthOfTheEdge / 2.0) * (1.0 / Math.tan(Math.PI / numberOfEdgesForEachFace)) * Math.tan(dihedralAngle / 2.0);
+		return area() * inRadius / 3.0;
+		
+		/*
 		if(numberOfEdgesForEachFace == 3 && numberOfFacesMeetingAtEachVertex == 3){
 			return 1.0*Math.sqrt(2)*lengthOfTheEdge*lengthOfTheEdge*lengthOfTheEdge/12;
 		} else if (numberOfEdgesForEachFace == 4 && numberOfFacesMeetingAtEachVertex == 3) {
@@ -29,15 +36,17 @@ public class PlatonicSolid extends Shape3D{
 		} else {
 			return 0;
 		}
+		*/
 	}
 
 	@Override
 	public double area() {
 		// TODO Auto-generated method stub
+		double faces;
+		faces = (4*numberOfFacesMeetingAtEachVertex)/(4-(numberOfEdgesForEachFace-2)*(numberOfFacesMeetingAtEachVertex-2));
+		return (1.0*lengthOfTheEdge*lengthOfTheEdge/4)*faces*numberOfEdgesForEachFace/(Math.tan(Math.PI/numberOfEdgesForEachFace));
 		
-		//return (1.0*lengthOfTheEdge*lengthOfTheEdge/2)*(1.0*lengthOfTheEdge*lengthOfTheEdge/2)*numberOfFacesMeetingAtEachVertex
-		
-		
+		/*
 		if(numberOfEdgesForEachFace == 3 && numberOfFacesMeetingAtEachVertex == 3){
 			return 1.0*Math.sqrt(3)*lengthOfTheEdge*lengthOfTheEdge;
 		} else if (numberOfEdgesForEachFace == 4 && numberOfFacesMeetingAtEachVertex == 3) {
@@ -51,7 +60,7 @@ public class PlatonicSolid extends Shape3D{
 		} else {
 			return 0;
 		}
-		
+		*/
 	}
 
 	public int getNumberOfEdgesForEachFace() {

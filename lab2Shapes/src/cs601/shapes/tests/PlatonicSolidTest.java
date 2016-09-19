@@ -19,10 +19,10 @@ public class PlatonicSolidTest {
 		PlatonicSolid platonicSolid2 = new PlatonicSolid(5, 3, 1.0);
 				
 		actual1 = platonicSolid.area();
-		expected1 = 1.7320508075688772;
+		expected1 = 1.73205080756887;
 		
 		actual2 = platonicSolid2.area();
-		expected2 = 20.645728807067602;
+		expected2 = 20.6457288070676;
 
 		Assert.assertEquals(String.format("%n" + "Test Case: %s%n", testName), expected1, actual1, EPS);
 		Assert.assertEquals(String.format("%n" + "Test Case: %s%n", testName), expected2, actual2, EPS);
@@ -38,10 +38,10 @@ public class PlatonicSolidTest {
 		PlatonicSolid platonicSolid2 = new PlatonicSolid(3, 4, 1.0);
 				
 		actual1 = platonicSolid.volume();
-		expected1 = 2.18169;
+		expected1 = 2.1816949906249157;
 		
 		actual2 = platonicSolid2.volume();
-		expected2 = 0.471405;
+		expected2 = 0.47140452079103207;
 
 		Assert.assertEquals(String.format("%n" + "Test Case: %s%n", testName), expected1, actual1, EPS);
 		Assert.assertEquals(String.format("%n" + "Test Case: %s%n", testName), expected2, actual2, EPS);
