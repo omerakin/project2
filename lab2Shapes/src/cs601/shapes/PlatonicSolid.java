@@ -1,11 +1,21 @@
 package cs601.shapes;
 
+/**
+ * @author akin_
+ *
+ */
 public class PlatonicSolid extends Shape3D{
 
 	private int  numberOfEdgesForEachFace;
 	private int  numberOfFacesMeetingAtEachVertex;
 	private double  lengthOfTheEdge;
 	
+	/**
+	 * 
+	 * @param numberOfEdgesForEachFace  the number of edges for each face
+	 * @param numberOfFacesMeetingAtEachVertex , the number of faces meeting at each vertex
+	 * @param lengthOfTheEdge  the length of the edge
+	 */
 	public PlatonicSolid(int numberOfEdgesForEachFace, int numberOfFacesMeetingAtEachVertex, double lengthOfTheEdge) {
 		// TODO Auto-generated constructor stub
 		this.numberOfEdgesForEachFace = numberOfEdgesForEachFace;
@@ -13,6 +23,10 @@ public class PlatonicSolid extends Shape3D{
 		this.lengthOfTheEdge = lengthOfTheEdge;
 	}
 
+	/**
+	 * An abstract method for computing the volume of the shape.
+	 * @return A volume of the 3D shape.
+	 */
 	@Override
 	public double volume() {
 		// TODO Auto-generated method stub
@@ -39,6 +53,10 @@ public class PlatonicSolid extends Shape3D{
 		*/
 	}
 
+	/**
+	 * An abstract method for computing the area or the surface area of the shape.
+	 * @return area of the shape
+	 */
 	@Override
 	public double area() {
 		// TODO Auto-generated method stub
@@ -63,26 +81,50 @@ public class PlatonicSolid extends Shape3D{
 		*/
 	}
 
+	/**
+	 * 
+	 * @return  the number of edges for each face
+	 */
 	public int getNumberOfEdgesForEachFace() {
 		return numberOfEdgesForEachFace;
 	}
 
+	/**
+	 * 
+	 * @param numberOfEdgesForEachFace
+	 */
 	public void setNumberOfEdgesForEachFace(int numberOfEdgesForEachFace) {
 		this.numberOfEdgesForEachFace = numberOfEdgesForEachFace;
 	}
 
+	/**
+	 * 
+	 * @return the number of faces meeting at each vertex
+	 */
 	public int getNumberOfFacesMeetingAtEachVertex() {
 		return numberOfFacesMeetingAtEachVertex;
 	}
 
+	/**
+	 * 
+	 * @param numberOfFacesMeetingAtEachVertex
+	 */
 	public void setNumberOfFacesMeetingAtEachVertex(int numberOfFacesMeetingAtEachVertex) {
 		this.numberOfFacesMeetingAtEachVertex = numberOfFacesMeetingAtEachVertex;
 	}
 
+	/**
+	 * 
+	 * @return  the length of the edge.
+	 */
 	public double getLengthOfTheEdge() {
 		return lengthOfTheEdge;
 	}
 
+	/**
+	 * 
+	 * @param lengthOfTheEdge
+	 */
 	public void setLengthOfTheEdge(double lengthOfTheEdge) {
 		this.lengthOfTheEdge = lengthOfTheEdge;
 	}
